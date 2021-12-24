@@ -2,23 +2,6 @@
 {% load static %}
 
 
-<<<<<<< HEAD
-<body>
-	<div class="container">
-		<div class="hero-white">
-			<div class="header clearfix">
-				<a href="index.html" class="logo"></a>
-				<ul class="menu">
-<<<<<<< HEAD
-					<li><a href="index">домой</a></li>
-					<li><a href="products" class="active">продукты</a></li>
-					<li><a href="contact">контакты</a></li>
-=======
-					<li><a href="index.html">домой</a></li>
-					<li><a href="products.html" class="active">продукты</a></li>
-					<li><a href="contact.html">контакты</a></li>
->>>>>>> master
-=======
 {% block menu %}
 <div class="hero-white">
 	<div class="header clearfix">
@@ -26,7 +9,6 @@
 	</div>
 </div>
 {% endblock %}
->>>>>>> Lesson 2. Templates
 
 {% block content %}
 <div class="details">
@@ -89,14 +71,3 @@
 						<img src="{% static 'img/icon-hover.png' %}" alt="img">
 						<h4>{{ same_product.name }}</h4>
 						<p>{{ same_product.desc }} </p>
-					</div>
-				</a>
-			</div>
-			{% endfor %}
-		</div>
-	</div>
-</div>
-
-<div class="clr"></div>
-
-{% endblock %}
