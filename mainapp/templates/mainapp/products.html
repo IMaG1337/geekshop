@@ -2,16 +2,6 @@
 {% load static %}
 
 
-<<<<<<< HEAD
-=======
-<body>
-	<div class="container">
-		<div class="hero-white">
-			<div class="header clearfix">
-				<a href="index.html" class="logo"></a>
-				<ul class="menu">
-
->>>>>>> 4ed052458640290a7bbca759797d59cf6634c604
 {% block menu %}
 <div class="hero-white">
 	<div class="header clearfix">
@@ -74,10 +64,24 @@
 			<a class="explore" href="#">показать все <img src="{% static 'img/arrow.png' %}" alt=""></a>
 		</div>
 		<div class="related-products clearfix">
-			{% for same_product in same_products %}
+			{% for product in same_products %}
 			<div class="block">
-				<a href="#"><img src="{% static 'img/' %}{{ same_product.image_src }}" alt="{{ same_product.image_alt }}">
+				<a href="#"><img src="{{ media_url }}{{ product.image }}" alt="{{ product.short_desc }}">
 					<div class="text">
-						<img src="{% static 'img/icon-hover.png' %}" alt="img">
-						<h4>{{ same_product.name }}</h4>
-						<p>{{ same_product.desc }} </p>
+						<img src="/static/img/icon-hover.png" alt="img">
+						<h3>Категория:{{ product.category.name }}</h3>
+						<h4>Название: {{ product.name }}</h4>
+						<p>Описание: {{ product.description }} </p>
+						<p>Цена: {{ product.price }} </p>
+						<p>На складе: {{ product.quantity }} </p>
+					</div>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+<div class="clr"></div>
+
+{% endblock %}
