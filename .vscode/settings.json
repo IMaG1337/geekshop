@@ -14,6 +14,5 @@
   "editor.rulers": [
     120
   ],
-  "diffEditor.wordWrap": "off",
-  "editor.wordWrap": "wordWrapColumn"
+  "diffEditor.wordWrap": "off"
 }
