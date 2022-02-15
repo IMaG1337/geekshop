@@ -197,10 +197,10 @@ SOCIAL_AUTH_GITHUB_SECRET = github_auth["client_secret"]
 if DEBUG:
     INSTALLED_APPS.extend(
         [
-            "debug_toolbar",
-            "template_profiler_panel",
-        ]
-    )
+        "debug_toolbar",
+        "template_profiler_panel",
+        "django_extensions",
+    ])
 
 
 if DEBUG:
